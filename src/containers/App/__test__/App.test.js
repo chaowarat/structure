@@ -1,5 +1,5 @@
 import React from 'react';
-import App from './App';
+import App from 'Containers/App';
 import { shallow } from 'enzyme';
 
 it('renders correctly', () => {

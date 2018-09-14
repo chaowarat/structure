@@ -1,3 +1,4 @@
+### project structure for reactjs with redux
 
 ## Folder Structure
 
@@ -34,7 +35,7 @@ structure/
           App.test.js
         App.css
         App.js
-        App.test.js
+        index.js
     images/
     redux/
     utils/
@@ -42,6 +43,22 @@ structure/
     index.js
     registerServiceWorker.js
     setupTests.js
+```
+
+## Import Class or Components
+
+```js
+// import from src/components
+const Blank = 'Components/Blank';
+
+// import from src/containers
+const App = 'Containers/App';
+
+// import from src/images
+import logo from 'Images/logo.svg';
+
+// import from src/utils
+const sum = 'Utils/sum';
 ```
 
 ## Available Scripts
@@ -61,10 +78,11 @@ When you run `npm test`, Jest will launch in the watch mode. Every time you save
 
 The watcher includes an interactive command-line interface with the ability to run all tests, or focus on a search pattern. It is designed this way so that you can keep it open and enjoy fast re-runs. You can learn the commands from the “Watch Usage” note that the watcher prints after every run.
 
-### `npm test -- --coverage`
-Launches the test runner with coverage results.
-
 ![Jest watch mode](http://facebook.github.io/jest/img/blog/15-watch.gif)
+
+### `npm test -- --coverage`
+
+Launches the test runner with coverage results.
 
 ### `npm run build`
 

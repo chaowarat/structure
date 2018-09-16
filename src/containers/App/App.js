@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import logo from 'Images/logo.svg'
 import './App.css'
 import Blank from 'Components/Blank'
+import Example from 'Components/Example'
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
           <h1 className="App-title">Project Structure Template</h1>
         </header>
         <Blank />
+        <Example name="chaow" />
       </div>
     )
   }

@@ -59,6 +59,9 @@ import logo from 'Images/logo.svg';
 
 // import from src/utils
 const sum = 'Utils/sum';
+
+// import from src/redux
+const { addTodo } = 'Redux/actions';
 ```
 
 ## Available Scripts

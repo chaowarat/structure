@@ -4,7 +4,10 @@
   "private": true,
   "dependencies": {
     "react": "^16.5.0",
-    "react-dom": "^16.5.0"
+    "react-dom": "^16.5.0",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "autoprefixer": "7.1.6",
@@ -38,6 +41,7 @@
     "postcss-loader": "2.0.8",
     "promise": "8.0.1",
     "react-dev-utils": "^5.0.2",
+    "redux-mock-store": "^1.5.3",
     "style-loader": "0.19.0",
     "sw-precache-webpack-plugin": "^0.11.5",
     "url-loader": "0.6.2",
@@ -53,13 +57,16 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "src/**/*.{js,jsx,mjs}",
+      "src/*/*.{js,jsx,mjs}",
+      "src/*/**/*.{js,jsx,mjs}",
       "!/index.js",
       "!src/index.js",
       "!src/registerServiceWorker.js",
       "!src/components/*/index.js",
       "!src/utils/index.js",
-      "!src/containers/*/index.js"
+      "!src/containers/*/index.js",
+      "!src/redux/actions/*",
+      "!src/redux/reducers/*"
     ],
     "setupFiles": [
       "<rootDir>/config/polyfills.js",
@@ -67,8 +74,8 @@
       "<rootDir>/src/setupTests.js"
     ],
     "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
-      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
+      "<rootDir>/src/*/**/__tests__/**/*.{js,jsx,mjs}",
+      "<rootDir>/src/*/**/?(*.)(spec|test).{js,jsx,mjs}"
     ],
     "testEnvironment": "node",
     "testURL": "http://localhost",
@@ -84,7 +91,8 @@
       "^Images(.*)$": "<rootDir>/src/images$1",
       "^Utils(.*)$": "<rootDir>/src/utils$1",
       "^Containers(.*)$": "<rootDir>/src/containers$1",
-      "^Components(.*)$": "<rootDir>/src/Components$1",
+      "^Components(.*)$": "<rootDir>/src/components$1",
+      "^Redux(.*)$": "<rootDir>/src/redux$1",
       "^react-native$": "react-native-web"
     },
     "moduleFileExtensions": [

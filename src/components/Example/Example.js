@@ -1,6 +1,8 @@
-import React, { Component } from 'react';
-import './Example.css';
-import { builder } from './core';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import './Example.css'
+import { builder } from './stringBuilder'
+import { addTodo } from 'Redux/actions'
 
 class Example extends Component {
   state = {
@@ -15,14 +17,16 @@ class Example extends Component {
     /* Might pass "this" as param instead */
     const { name } = this.props
     const { pre } = this.state
-    const data = builder(pre, name);
+    const data = builder(pre, name)
 
     /* don't expect this will fails */
     /* don't test the others package or library */
-    sessionStorage.setItem('fullText', JSON.stringify(data));
+    sessionStorage.setItem('fullText', JSON.stringify(data))
 
     /* calling outside function may use mock fn to test */
-    this.props.onSaveFinish && this.props.onSaveFinish();
+    this.props.onSaveFinish && this.props.onSaveFinish()
+
+    this.props.addTodo && this.props.addTodo(data)
   }
 
   render() {
@@ -38,4 +42,12 @@ class Example extends Component {
   }
 }
 
-export default Example
+const mapStateToProps = (state) => ({
+  todos: state.todos
+})
+
+const mapDispatchToProps = (dispatch) => ({
+  addTodo: () => dispatch(addTodo)
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Example)

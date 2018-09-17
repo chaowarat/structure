@@ -6,7 +6,8 @@ const sharedConfig = {
     'Utils': path.resolve(__dirname, '../src/utils/'),
     'Containers': path.resolve(__dirname, '../src/containers/'),
     'Components': path.resolve(__dirname, '../src/components/'),
-  },
+    'Redux': path.resolve(__dirname, '../src/redux/')
+  }
 };
 
 module.exports = sharedConfig

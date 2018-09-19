@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 
-const port = process.env.PORT
+const port = process.env.PORT || 3000
 
 const bodyParser = require('body-parser');
 
@@ -25,7 +25,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json({ limit: '50mb' }));
 
 app.listen(port, () => { 
-  console.log('Server listening on port %d', this.address().port);
+  console.log('Server listening on port %d', port);
 });
 
 

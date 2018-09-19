@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import './Example.css'
 import { builder } from './stringBuilder'
-import { addTodo } from 'Redux/actions'
+// import { addTodo } from 'Redux/actions'
 
 class Example extends Component {
   state = {
@@ -26,7 +26,7 @@ class Example extends Component {
     /* calling outside function may use mock fn to test */
     this.props.onSaveFinish && this.props.onSaveFinish()
 
-    this.props.addTodo && this.props.addTodo(data)
+ //   this.props.addTodo && this.props.addTodo(data)
   }
 
   render() {

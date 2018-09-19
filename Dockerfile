@@ -6,6 +6,7 @@ RUN mkdir /usr/src/app
 WORKDIR /usr/src/app
 
 COPY package*.json ./
+COPY . .
 
 # add `/usr/src/app/node_modules/.bin` to $PATH
 ENV PATH /usr/src/app/node_modules/.bin:$PATH

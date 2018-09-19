@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import logo from 'Images/logo.svg'
+import logo from '../../images/logo.svg'
 import './App.css'
-import Blank from 'Components/Blank'
-import Example from 'Components/Example'
+import Blank from '../../components/Blank/Blank'
+import Example from '../../components/Example/Example'
 
 class App extends Component {
   render() {
